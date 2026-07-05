@@ -1,1 +1,1 @@
-Esse é um projeto pessoal somente para estudos python.
+Este repositório é dedicado aos meus estudos de Python. Aqui reúno exercícios, testes e pequenos projetos desenvolvidos ao longo do meu aprendizado, registrando minha evolução na linguagem.
