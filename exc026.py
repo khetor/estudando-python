@@ -1,0 +1,6 @@
+print("Conta quantidade de A e quando aparece pela primeira e ultima vez.")
+frase = input("Digite a frase: ")
+frasel = frase.lower()
+print (frasel.count("a"))
+print (frasel.find("a"))
+print (frasel.rfind("a"))

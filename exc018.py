@@ -1,0 +1,10 @@
+import math
+print ("Programa que calcula seno,cosseno e tangente baseado no angulo:")
+angulo = float (input("Qual o angulo?: "))
+radianos = math.radians(angulo)
+seno = math.sin(radianos)
+cosseno = math.cos(radianos)
+tangente = math.tan(radianos)
+print (f"O seno de {angulo} é {seno:.2f}")
+print (f"O Cosseno de {angulo} é {cosseno:.2f}")
+print (f"A tangente de {angulo} é {tangente:.2f}")

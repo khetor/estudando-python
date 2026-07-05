@@ -1,0 +1,5 @@
+print ("Programa que lê um nome completo e mostra o primeiro nome e o ultimo:")
+nome = input("Digite o nome completo: ")
+nomesplitado = nome.split()
+print (nomesplitado[0])
+print (nomesplitado[-1])
