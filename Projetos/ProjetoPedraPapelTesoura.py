@@ -1,4 +1,4 @@
-print ("Bem vindo ao Pedra papel e tesoura!,Se divirta!")
+print ("\033[32mBem vindo ao Pedra papel e tesoura!,Se divirta!\033[m")
 import random
 humanchoice = input("Digite sua jogada!: ")
 

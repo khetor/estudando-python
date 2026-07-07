@@ -1,4 +1,4 @@
-print ("Programa que soma dois valores.")
+print ("\033[34mPrograma que soma dois valores.\033[m")
 valor1 = int (input("Digite o primeiro valor: "))
 valor2 = int (input("Digite o segundo valor: "))
 soma = valor1+valor2
