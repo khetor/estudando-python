@@ -1,35 +1,41 @@
-print ("\033[32mBem vindo ao Pedra papel e tesoura!,Se divirta!\033[m")
+print ("\033[35mJogue pedra papel e tesoura!: \033[m")
 import random
-humanchoice = input("Digite sua jogada!: ")
+import pygame
+pygame.init()
+jogadas = ["pedra","papel","tesoura"]
+humanchoice = input("Digite sua jogada: ")
+humanchoicelower = humanchoice.strip().lower()
+if humanchoicelower != "pedra" and humanchoicelower != "papel" and humanchoicelower != "tesoura":
+    print ("\033[31mIsso não faz parte do jogo,reinicie o programa.\033[m")
+    exit ()
+machinechoice = random.choice(jogadas)
 
-humanchoicelow = humanchoice.strip().lower()
+if humanchoicelower == machinechoice:
+    print (f"\033[33mVocê jogou {humanchoice} e o robô jogou {machinechoice},empate!\033[m")
 
-machine_lista = ["tesoura","papel","pedra"]
+elif humanchoicelower == "tesoura" and machinechoice == "papel":
+    print ("\033[32mVocê jogou tesoura e o robô jogou papel,Você GANHOU!\033[m")
+    pygame.mixer.music.load("correto-2.mp3")
+    pygame.mixer.music.play()
+elif humanchoicelower == "pedra" and machinechoice =="tesoura":
+    print ("\033[32mVocê jogou pedra e o robô jogou tesoura,Você GANHOU!\033[m")
+    pygame.mixer.music.load("correto-2.mp3")
+    pygame.mixer.music.play()
+elif humanchoicelower == "papel" and machinechoice =="pedra":
+    print ("\033[32mVocê jogou papel e o robô jogou pedra,Você GANHOU!\033[m")
+    pygame.mixer.music.load("correto-2.mp3")
+    pygame.mixer.music.play()
 
-if humanchoicelow != machine_lista[0] and humanchoicelow != machine_lista[1] and humanchoicelow != machine_lista[2]:
-    print("Ei isso não faz parte das escolhas,joga direito ai pow!")
-    exit()
-
-machinechoice = random.choice(machine_lista)
-
-if humanchoicelow==machinechoice:
-    print (f"Você escolheu {humanchoicelow} e ele támbem,empate.")
-
-if humanchoicelow == "tesoura" and machinechoice == "papel":
-    print ("Você escolheu tesoura e o robo papel KKKKKKK ganhasse")
-
-if humanchoicelow =="papel" and machinechoice == "pedra":
-    print ("Você escolheu papel e o robo pedra KKKKKKK ganhasse")
-
-if humanchoicelow =="pedra" and machinechoice =="tesoura":
-    print ("Você escolheu pedra e o robo tesoura KKKKKKK ganhasse")
-
-
-if humanchoicelow == "tesoura" and machinechoice == "pedra":
-    print ("Perdesse newbaa,escolhece tesoura e ele pedra")
-
-if humanchoicelow =="papel" and machinechoice == "tesoura":
-    print ("Perdesse newbaa,escolhece papel e ele tesoura")
-
-if humanchoicelow =="pedra" and machinechoice =="papel":
-    print("Perdesse newbaa,escolhece pedra e ele papel")
+elif humanchoicelower == "tesoura" and machinechoice == "pedra":
+    print ("\033[31mVocê jogou tesoura e o robô jogou pedra,Você PERDEU!\033[m")
+    pygame.mixer.music.load("bob-esponja-fail-sound.mp3")    
+    pygame.mixer.music.play()    
+elif humanchoicelower == "pedra" and machinechoice == "papel":
+    print ("\033[31mVocê jogou pedra e o robô jogou papel,Você PERDEU!\033[m")
+    pygame.mixer.music.load("bob-esponja-fail-sound.mp3")    
+    pygame.mixer.music.play()    
+elif humanchoicelower == "papel" and machinechoice == "tesoura":
+    print ("\033[31mVocê jogou papel e o robô jogou tesoura,Você PERDEU!\033[m")
+    pygame.mixer.music.load("bob-esponja-fail-sound.mp3")    
+    pygame.mixer.music.play()  
+input("Aperte Enter para sair.")
