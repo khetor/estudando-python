@@ -1,14 +1,14 @@
 import time
 import pygame
 pygame.init()
-print ("CONTAGEM REGREESIVA DE 10 SEGUNDOS QUANDO VOCÊ APERTAR ENTER!")
-input (":")
-for i in range (10, 0, -1):
-    print(i)
-    time.sleep(1)
+print ("Contagem Regressiva de 10 a 0.")
+input ("Aperte enter para começar a contagem: ")
+for contagem in range (10, 0, -1):
+    print(contagem)
     pygame.mixer.music.load("bipp.mp3")
     pygame.mixer.music.play()
+    time.sleep(1)
+print("ACABOUU")
 pygame.mixer.music.load("fogos.mp3")
 pygame.mixer.music.play()
-input("Encerre o programa apertando enter: ")
-
+input ("Aperte enter para finalizar o programa: ")
