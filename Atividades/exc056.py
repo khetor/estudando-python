@@ -30,4 +30,4 @@ for perguntas in range(1,4):
 media = contadoridade/4
 print (f"A média de idade das pessoas do grupo é {media:.2f}")
 print (f"O nome do homem mais velho é {primeironome}.")
-print (f"Temos {contadormulheres} com menos de 20 anos.")
+print (f"Temos {contadormulheres} mulher com menos de 20 anos.")
